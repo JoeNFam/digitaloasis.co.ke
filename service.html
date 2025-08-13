@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services - Digital Oasis</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body id="top">
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">Digital Oasis</a>
+                    <a href="index.html">Digital <span>Oasis</span></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -24,72 +29,139 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Our IT & Networking Services</h1>
-        <p>Comprehensive technology solutions for modern Kenyan businesses</p>
+        <div class="container hero-content">
+            <h1>Our IT & Networking Services</h1>
+            <p>From MikroTik automation to enterprise networks — we deliver smart, scalable solutions for Kenyan businesses.</p>
+            <a href="contact.html" class="btn">Get a Quote</a>
+        </div>
     </section>
 
+    <!-- Main Services -->
     <section class="services-section">
         <div class="container">
-            <h2 class="section-title">What We Offer</h2>
-            <div class="features" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+            <h2 class="section-title">Core Services</h2>
+            <div class="features">
                 <div class="service-card">
-                    <img src="https://source.unsplash.com/random/300x200/?router" alt="Network Installation">
+                    <img src="images/network-install.jpg" alt="Network Installation">
                     <div class="service-content">
-                        <h3>Network Installation & Setup</h3>
-                        <p>Complete wired and wireless network deployment for offices, schools, and commercial buildings.</p>
+                        <h3>Network Installation</h3>
+                        <p>Complete setup for offices, schools, and campuses. Fiber, Wi-Fi 6, and mesh networks with zero downtime.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://source.unsplash.com/random/300x200/?wifi" alt="Wi-Fi Solutions">
+                    <img src="images/wifi-survey.jpg" alt="Wi-Fi Solutions">
                     <div class="service-content">
-                        <h3>Enterprise Wi-Fi Solutions</h3>
-                        <p>Seamless, high-speed coverage with mesh networks and access point optimization.</p>
+                        <h3>Enterprise Wi-Fi</h3>
+                        <p>Seamless coverage with site surveys, access point optimization, and guest portal integration.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://source.unsplash.com/random/300x200/?support" alt="IT Support">
+                    <img src="images/it-support.jpg" alt="IT Support">
                     <div class="service-content">
                         <h3>Managed IT Support</h3>
                         <p>24/7 helpdesk, remote monitoring, and on-site support for uninterrupted operations.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://source.unsplash.com/random/300x200/?datacenter" alt="Data Center">
+                    <img src="images/data-center.jpg" alt="Data Center">
                     <div class="service-content">
-                        <h3>Data Center Solutions</h3>
-                        <p>Rack setup, cooling, power backup, and redundancy planning for mission-critical systems.</p>
+                        <h3>Data Center Setup</h3>
+                        <p>Rack installation, cooling, UPS, and redundancy planning for critical systems.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://source.unsplash.com/random/300x200/?voip" alt="VoIP">
+                    <img src="images/voip.jpg" alt="VoIP">
                     <div class="service-content">
-                        <h3>VoIP & Unified Communications</h3>
-                        <p>Modern phone systems integrated with email, chat, and video conferencing.</p>
+                        <h3>VoIP & Unified Comms</h3>
+                        <p>Modern phone systems with video conferencing, chat, and mobile integration.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <img src="https://source.unsplash.com/random/300x200/?backup" alt="Backup">
+                    <img src="images/backup.jpg" alt="Backup">
                     <div class="service-content">
                         <h3>Data Backup & Recovery</h3>
-                        <p>Automated backups, disaster recovery planning, and ransomware protection.</p>
+                        <p>Automated backups, ransomware protection, and disaster recovery planning.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- MikroTik Section -->
+    <section id="mikrotik">
+        <div class="container">
+            <h2 class="section-title">MikroTik Billing & Management System</h2>
+            <div style="background: white; border-radius: 15px; padding: 2.5rem; box-shadow: 0 10px 30px rgba(0, 168, 107, 0.15); max-width: 900px; margin: 0 auto;">
+                <img src="images/mikrotik-router.jpg" alt="MikroTik Router" style="width: 100%; height: 250px; object-fit: cover; border-radius: 10px; margin-bottom: 1.5rem;">
+
+                <h3 style="color:#006b42; margin-bottom: 1rem;">Full Integration with All MikroTik Models</h3>
+                <p>We support <strong>hAP, RB, CCR, xAP, LtAP, and more</strong> with advanced billing, user management, and automation.</p>
+
+                <div class="mikrotik-features" style="margin: 2rem 0; justify-content: center;">
+                    <div class="mikrotik-feature"><i class="fas fa-microchip"></i> All RouterBOARD Models</div>
+                    <div class="mikrotik-feature"><i class="fas fa-money-bill-wave"></i> M-Pesa & Airtel Money</div>
+                    <div class="mikrotik-feature"><i class="fas fa-user-shield"></i> Hotspot & PPPoE</div>
+                    <div class="mikrotik-feature"><i class="fas fa-globe"></i> Custom Login Portals</div>
+                </div>
+
+                <p><strong>Features:</strong> Real-time monitoring, bandwidth control, multi-site management, user self-service, SMS alerts, and API integration.</p>
+
+                <div style="text-align:center; margin: 2.5rem 0;">
+                    <a href="contact.html" class="btn">Get MikroTik Setup</a>
+                    <a href="#demo-video" class="btn btn-outline">Watch Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section id="demo-video" style="padding: 3rem 0; background:#f0fff0;">
+        <div class="container">
+            <h2 class="section-title">Watch Our MikroTik System in Action</h2>
+            <p style="text-align:center; max-width:800px; margin:0 auto 2.5rem;">See how we integrate M-Pesa payments, manage users, and automate billing across multiple MikroTik devices.</p>
+            
+            <!-- YouTube Video Embed -->
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; max-width:100%; margin:0 auto;">
+                <iframe 
+                    src="https://www.youtube.com/embed/VIDEO-ID" 
+                    style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.15);"
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <p style="text-align:center; margin:2rem 0;">
+                <a href="videos/mikrotik-demo.mp4" class="btn btn-outline" style="margin:1rem;" download>
+                    <i class="fas fa-download"></i> Download Demo Video
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section>
+        <div class="container" style="text-align:center; padding:3rem 1rem;">
+            <h2 style="color:#006b42;">Need MikroTik Setup or Support?</h2>
+            <p style="max-width:700px; margin:0 auto 2rem;">We’ve deployed over 50 MikroTik systems across Kenya — from ISPs to hotels and campuses.</p>
+            <a href="contact.html" class="btn">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Digital Oasis</h3>
-                    <p>Trusted IT & Networking Partner for Kenyan Businesses</p>
+                    <p>Your trusted partner for IT & MikroTik solutions in Kenya.</p>
                     <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">TW</a>
-                        <a href="#">IG</a>
-                        <a href="#">LI</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -104,24 +176,27 @@
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p>📍 Nairobi, Kenya</p>
-                    <p>📞 +254 700 123 456</p>
-                    <p>✉️ info@digitaloasis.co.ke</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Upper Hill, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@digitaloasis.co.ke</p>
                 </div>
             </div>
-            <p>&copy; 2024 Digital Oasis. All rights reserved.</p>
+            <p>&copy; 2024 Digital Oasis. All rights reserved. Made with ❤️ in Kenya.</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
-<div class="service-card">
-    <img src="images/mikrotik-router.jpg" alt="MikroTik Billing System">
-    <div class="service-content">
-        <h3>MikroTik Billing & Management</h3>
-        <p>Full integration with all MikroTik router models (hAP, RB, CCR, xAP) for hotspot billing, user management, bandwidth control, and remote monitoring.</p>
-        <p>✅ Supports PayPal, M-Pesa & Airtel Money<br>
-        ✅ Real-time usage tracking<br>
-        ✅ Customizable login portals<br>
-        ✅ Multi-site management</p>
-    </div>
-</div>
