@@ -3,15 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Digital Oasis</title>
+    <title>Our Projects - Digital Oasis</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem auto 3rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            background: #e0f7e0;
+            color: #006b42;
+            border: 2px solid #00a86b;
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .filter-btn.active, .filter-btn:hover {
+            background: #00a86b;
+            color: white;
+        }
+        .client-logos {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2.5rem;
+            margin: 3rem auto;
+            max-width: 900px;
+        }
+        .client-logo {
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: all 0.4s ease;
+            height: 60px;
+            object-fit: contain;
+        }
+        .client-logo:hover {
+            filter: none;
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        .project-tag {
+            display: inline-block;
+            background: #00a86b;
+            color: white;
+            font-size: 0.8rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            margin-top: 0.8rem;
+        }
+    </style>
 </head>
-<body>
+<body id="top">
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">Digital Oasis</a>
+                    <a href="index.html">Digital <span>Oasis</span></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -24,72 +81,150 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Our Projects</h1>
-        <p>See how we've transformed businesses with smart IT solutions</p>
+        <div class="container hero-content">
+            <h1>Our Projects & Case Studies</h1>
+            <p>See how we’ve transformed networks, automated billing, and empowered businesses across Kenya with MikroTik.</p>
+        </div>
     </section>
 
+    <!-- Filter Buttons -->
+    <section style="padding:1rem 0; background:#f0fff0;">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active">All Projects</button>
+                <button class="filter-btn">MikroTik</button>
+                <button class="filter-btn">ISPs</button>
+                <button class="filter-btn">Hotels</button>
+                <button class="filter-btn">Enterprises</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
     <section class="portfolio">
         <div class="container">
-            <h2 class="section-title">Case Studies & Success Stories</h2>
+            <h2 class="section-title">Success Stories</h2>
             <div class="portfolio-grid">
+                <!-- Project 1 -->
                 <div class="project">
-                    <img src="https://source.unsplash.com/random/300x200/?office,kenya" alt="Nairobi Office Network">
+                    <img src="images/mikrotik-isp.jpg" alt="MikroTik ISP Deployment">
                     <div class="project-info">
-                        <h3>Nairobi Corporate Office</h3>
-                        <p>Designed and deployed a 200-user fiber network with VoIP, Wi-Fi 6, and cloud backup.</p>
+                        <h3>Coastal Connect ISP</h3>
+                        <p>Deployed a nationwide MikroTik CCR network with M-Pesa billing for 5,000+ users.</p>
+                        <div class="project-tag">MikroTik • M-Pesa • ISP</div>
                     </div>
                 </div>
+                <!-- Project 2 -->
                 <div class="project">
-                    <img src="https://source.unsplash.com/random/300x200/?school" alt="School Network">
+                    <img src="images/hotel-network.jpg" alt="Hotel Wi-Fi System">
+                    <div class="project-info">
+                        <h3>Sunrise Beach Resort</h3>
+                        <p>Installed seamless Wi-Fi with branded login portal and automated guest billing.</p>
+                        <div class="project-tag">MikroTik • Hotspot • M-Pesa</div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project">
+                    <img src="images/school-network.jpg" alt="School Network">
                     <div class="project-info">
                         <h3>Kisumu High School</h3>
-                        <p>Installed campus-wide Wi-Fi, smart classrooms, and filtered internet access.</p>
+                        <p>Fiber backbone + Wi-Fi 6 across 12 buildings with filtered internet access.</p>
+                        <div class="project-tag">Education • Security • Network</div>
                     </div>
                 </div>
+                <!-- Project 4 -->
                 <div class="project">
-                    <img src="https://source.unsplash.com/random/300x200/?hospital" alt="Hospital IT">
+                    <img src="images/office-mikrotik.jpg" alt="Office MikroTik Setup">
                     <div class="project-info">
-                        <h3>Mombasa Medical Center</h3>
-                        <p>Implemented HIPAA-compliant network with redundancy, EMR integration, and security.</p>
+                        <h3>Nairobi Tech Hub</h3>
+                        <p>Multi-tenant MikroTik setup with PPPoE, bandwidth control, and user self-service.</p>
+                        <div class="project-tag">MikroTik • PPPoE • Office</div>
                     </div>
                 </div>
+                <!-- Project 5 -->
                 <div class="project">
-                    <img src="https://source.unsplash.com/random/300x200/?factory" alt="Factory Network">
+                    <img src="images/hospital-network.jpg" alt="Hospital Network">
                     <div class="project-info">
-                        <h3>Thika Manufacturing Plant</h3>
-                        <p>Industrial network for IoT devices, SCADA systems, and real-time monitoring.</p>
+                        <h3>Mombasa General Hospital</h3>
+                        <p>Secure, redundant network for EMR systems, VoIP, and staff internet.</p>
+                        <div class="project-tag">Healthcare • Security • VoIP</div>
                     </div>
                 </div>
+                <!-- Project 6 -->
                 <div class="project">
-                    <img src="https://source.unsplash.com/random/300x200/?bank" alt="Bank Security">
+                    <img src="images/cafes-network.jpg" alt="Cafe Network">
                     <div class="project-info">
-                        <h3>Coastal Bank Branches</h3>
-                        <p>Secured network across 12 branches with firewalls, encryption, and 24/7 monitoring.</p>
-                    </div>
-                </div>
-                <div class="project">
-                    <img src="https://source.unsplash.com/random/300x200/?startup" alt="Startup Office">
-                    <div class="project-info">
-                        <h3>Tech Startup Hub</h3>
-                        <p>Fast deployment of cloud-based infrastructure for 50+ remote and office workers.</p>
+                        <h3>Cafe Network Rollout</h3>
+                        <p>Standardized MikroTik hAP setup across 15 cafes with M-Pesa payments.</p>
+                        <div class="project-tag">MikroTik • M-Pesa • hAP</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Client Logos -->
+    <section style="padding:4rem 0; background:white;">
+        <div class="container">
+            <h2 class="section-title">Trusted by Kenya’s Leading Organizations</h2>
+            <div class="client-logos">
+                <!-- Placeholder logos - replace with actual images -->
+                <img src="images/logo-placeholder.png" alt="Client 1" class="client-logo" style="height:50px;">
+                <img src="images/logo-placeholder.png" alt="Client 2" class="client-logo" style="height:50px;">
+                <img src="images/logo-placeholder.png" alt="Client 3" class="client-logo" style="height:50px;">
+                <img src="images/logo-placeholder.png" alt="Client 4" class="client-logo" style="height:50px;">
+                <img src="images/logo-placeholder.png" alt="Client 5" class="client-logo" style="height:50px;">
+            </div>
+            <p style="text-align:center; color:#555; margin-top:1rem;">From startups to national ISPs, we deliver results.</p>
+        </div>
+    </section>
+
+    <!-- Case Study Spotlight -->
+    <section style="background:#e0f7e0; padding:5rem 0; margin:2rem 0;">
+        <div class="container" style="background:white; border-radius:20px; padding:3rem; box-shadow:0 10px 30px rgba(0,168,107,0.15); max-width:900px; margin:3rem auto; position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; width:100%; height:8px; background:linear-gradient(90deg,#00a86b,#006b42);"></div>
+            <h2 style="color:#006b42; text-align:center; margin-bottom:1.5rem;">Case Study: M-Pesa Billing Automation</h2>
+            <img src="images/mikrotik-mpesa.jpg" alt="M-Pesa Integration" style="width:100%; height:250px; object-fit:cover; border-radius:12px; margin:1.5rem 0;">
+            
+            <p><strong>Client:</strong> Coastal Connect ISP, Mombasa</p>
+            <p><strong>Challenge:</strong> Manual billing, low collection rates, no M-Pesa integration.</p>
+            <p><strong>Solution:</strong> Custom MikroTik + M-Pesa API integration with automated user activation and SMS alerts.</p>
+            <p><strong>Results:</strong></p>
+            <ul style="margin:1.5rem 0; padding-left:1.8rem;">
+                <li>⏱️ 90% reduction in billing time</li>
+                <li>💰 40% increase in payment collection</li>
+                <li>📱 5,000+ users on self-service portal</li>
+                <li>📉 Downtime reduced to <0.1%</li>
+            </ul>
+            <div style="text-align:center; margin-top:2rem;">
+                <a href="contact.html" class="btn">Get This Solution</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section>
+        <div class="container" style="text-align:center; padding:3rem 1rem;">
+            <h2 style="color:#006b42;">Want a Similar System?</h2>
+            <p style="max-width:700px; margin:0 auto 2rem;">We’ll design, deploy, and support your MikroTik network with M-Pesa, Airtel Money, and automation.</p>
+            <a href="contact.html" class="btn">Get a Free Project Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Digital Oasis</h3>
-                    <p>Trusted IT & Networking Partner for Kenyan Businesses</p>
+                    <p>Your trusted partner for IT & MikroTik solutions in Kenya.</p>
                     <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">TW</a>
-                        <a href="#">IG</a>
-                        <a href="#">LI</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -104,13 +239,44 @@
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p>📍 Nairobi, Kenya</p>
-                    <p>📞 +254 700 123 456</p>
-                    <p>✉️ info@digitaloasis.co.ke</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Upper Hill, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@digitaloasis.co.ke</p>
                 </div>
             </div>
-            <p>&copy; 2024 Digital Oasis. All rights reserved.</p>
+            <p>&copy; 2024 Digital Oasis. All rights reserved. Made with ❤️ in Kenya.</p>
         </div>
     </footer>
+
+    <script>
+        // Simple filter simulation (for demo)
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelector('.filter-btn.active').classList.remove('active');
+                this.classList.add('active');
+                // In real site, you'd filter projects by category
+            });
+        });
+
+        // Animate project cards on scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const projects = document.querySelectorAll('.project');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            projects.forEach((project, index) => {
+                project.style.opacity = 0;
+                project.style.transform = 'translateY(30px)';
+                project.style.transition = 'all 0.6s ease ' + (index * 0.1) + 's';
+                observer.observe(project);
+            });
+        });
+    </script>
 </body>
 </html>
