@@ -5,13 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Digital Oasis</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 3rem auto;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background: #00a86b;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            animation: fadeInLeft 0.6s ease forwards;
+            opacity: 0;
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #00a86b;
+            top: 18px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item:nth-child(odd)::after {
+            right: -10px;
+        }
+        .timeline-item:nth-child(even)::after {
+            left: -10px;
+        }
+        .timeline-content {
+            padding: 1.2rem;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 168, 107, 0.1);
+            border-left: 4px solid #00a86b;
+        }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .timeline-item:nth-child(even) {
+                left: 0;
+            }
+            .timeline-item::after {
+                left: 18px;
+                right: auto;
+            }
+        }
+    </style>
 </head>
-<body>
+<body id="top">
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">Digital Oasis</a>
+                    <a href="index.html">Digital <span>Oasis</span></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -24,48 +111,148 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>About Digital Oasis</h1>
-        <p>Kenya's trusted partner for professional IT and networking solutions</p>
+        <div class="container hero-content">
+            <h1>About Digital Oasis</h1>
+            <p>Nairobi’s trusted partner for IT infrastructure and MikroTik-powered networking solutions.</p>
+            <a href="contact.html" class="btn">Partner With Us</a>
+        </div>
     </section>
 
+    <!-- Our Story -->
     <section class="about">
         <div class="container">
             <h2 class="section-title">Our Story</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>Founded in 2016, Digital Oasis began with a simple mission: to make advanced IT infrastructure accessible to Kenyan businesses of all sizes.</p>
+                    <p><strong>Founded in 2018</strong>, Digital Oasis began with a mission: to make advanced networking and billing systems accessible to Kenyan businesses — from small cafes to large ISPs.</p>
                     <br>
-                    <p>Today, we serve over 150 clients across Nairobi, Mombasa, Kisumu, and beyond — from startups to government institutions.</p>
+                    <p>We specialize in <strong>MikroTik integration</strong>, helping clients automate hotspot billing, accept M-Pesa payments, and manage networks across multiple locations — all with enterprise-grade reliability.</p>
                     <br>
-                    <p>Our team of Cisco and Microsoft-certified engineers brings expertise in network design, cybersecurity, cloud solutions, and technical support.</p>
+                    <p>Today, we serve over <strong>150 clients</strong> across Nairobi, Mombasa, Kisumu, and beyond. Our team of Cisco and MikroTik-certified engineers brings deep expertise in network design, cybersecurity, and user management systems.</p>
                     <br>
-                    <p>We don't just install equipment — we build long-term partnerships, ensuring your technology grows with your business.</p>
+                    <p>We don’t just install routers — we build digital ecosystems that grow with your business.</p>
                 </div>
                 <div class="about-image"></div>
-            </div>
-
-            <h2 class="section-title" style="margin-top: 4rem;">Our Values</h2>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p><strong>Reliability:</strong> Uptime is everything. We design systems that work — every time.</p>
-                <p><strong>Security:</strong> Your data is protected with enterprise-grade defenses.</p>
-                <p><strong>Support:</strong> Real humans, 24/7. No bots, no runaround.</p>
-                <p><strong>Innovation:</strong> We stay ahead of trends so you don’t have to.</p>
             </div>
         </div>
     </section>
 
+    <!-- Timeline -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Our Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2018: Founded in Nairobi</h3>
+                        <p>Started with a focus on MikroTik setup for small offices and cyber cafes.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2020: First M-Pesa Integration</h3>
+                        <p>Launched Africa’s first fully automated MikroTik + M-Pesa billing system.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022: 100+ Clients Served</h3>
+                        <p>Expanded to serve ISPs, hotels, and educational institutions across Kenya.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2024: National Recognition</h3>
+                        <p>Awarded “Best IT Solutions Provider Kenya” by TechAfrica Awards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section style="background:#f0fff0; padding:5rem 0;">
+        <div class="container">
+            <h2 class="section-title">Our Core Values</h2>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem; max-width:900px; margin:0 auto;">
+                <div style="flex:1; min-width:250px; text-align:center; padding:1.8rem; background:white; border-radius:15px; box-shadow:0 5px 20px rgba(0,168,107,0.1);">
+                    <div style="font-size:2.5rem; color:#00a86b; margin-bottom:1rem;"><i class="fas fa-shield-alt"></i></div>
+                    <h3 style="color:#006b42; margin-bottom:1rem;">Security First</h3>
+                    <p>We harden every network against threats and ensure your data stays protected.</p>
+                </div>
+                <div style="flex:1; min-width:250px; text-align:center; padding:1.8rem; background:white; border-radius:15px; box-shadow:0 5px 20px rgba(0,168,107,0.1);">
+                    <div style="font-size:2.5rem; color:#00a86b; margin-bottom:1rem;"><i class="fas fa-sync-alt"></i></div>
+                    <h3 style="color:#006b42; margin-bottom:1rem;">Automation</h3>
+                    <p>We automate billing, user management, and reporting to save you time and money.</p>
+                </div>
+                <div style="flex:1; min-width:250px; text-align:center; padding:1.8rem; background:white; border-radius:15px; box-shadow:0 5px 20px rgba(0,168,107,0.1);">
+                    <div style="font-size:2.5rem; color:#00a86b; margin-bottom:1rem;"><i class="fas fa-hands-helping"></i></div>
+                    <h3 style="color:#006b42; margin-bottom:1rem;">Partnership</h3>
+                    <p>We work as an extension of your team — not just a vendor.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Meet Our Team</h2>
+            <p style="text-align:center; max-width:700px; margin:0 auto 3rem; color:#555;">
+                Our certified engineers are experts in MikroTik, networking, and African payment integrations.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:2rem;">
+                <div style="flex:1; min-width:250px; max-width:300px; text-align:center;">
+                    <div style="width:120px; height:120px; background:#e0f7e0; border:3px solid #00a86b; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:3rem; color:#006b42;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 style="color:#006b42;">James M.</h3>
+                    <p style="margin:0.5rem 0; font-weight:500; color:#00a86b;">Lead Network Engineer</p>
+                    <p>MikroTik Certified, 8+ years in ISP networks and automation.</p>
+                </div>
+                <div style="flex:1; min-width:250px; max-width:300px; text-align:center;">
+                    <div style="width:120px; height:120px; background:#e0f7e0; border:3px solid #00a86b; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:3rem; color:#006b42;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 style="color:#006b42;">Amina K.</h3>
+                    <p style="margin:0.5rem 0; font-weight:500; color:#00a86b;">Billing Systems Expert</p>
+                    <p>Specialist in M-Pesa, Airtel Money, and user portal design.</p>
+                </div>
+                <div style="flex:1; min-width:250px; max-width:300px; text-align:center;">
+                    <div style="width:120px; height:120px; background:#e0f7e0; border:3px solid #00a86b; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1rem; font-size:3rem; color:#006b42;">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 style="color:#006b42;">David O.</h3>
+                    <p style="margin:0.5rem 0; font-weight:500; color:#00a86b;">Support & Training Lead</p>
+                    <p>Ensures smooth onboarding and 24/7 support for all clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section>
+        <div class="container" style="text-align:center; padding:3rem 1rem;">
+            <h2 style="color:#006b42;">Ready to Work With Experts?</h2>
+            <p style="max-width:700px; margin:0 auto 2rem;">Let’s discuss how we can automate your network, integrate M-Pesa, and scale your business.</p>
+            <a href="contact.html" class="btn">Schedule Free Consultation</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Digital Oasis</h3>
-                    <p>Trusted IT & Networking Partner for Kenyan Businesses</p>
+                    <p>Your trusted partner for IT & MikroTik solutions in Kenya.</p>
                     <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">TW</a>
-                        <a href="#">IG</a>
-                        <a href="#">LI</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -80,13 +267,36 @@
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p>📍 Nairobi, Kenya</p>
-                    <p>📞 +254 700 123 456</p>
-                    <p>✉️ info@digitaloasis.co.ke</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Upper Hill, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> +254 700 123 456</p>
+                    <p><i class="fas fa-envelope"></i> info@digitaloasis.co.ke</p>
                 </div>
             </div>
-            <p>&copy; 2024 Digital Oasis. All rights reserved.</p>
+            <p>&copy; 2024 Digital Oasis. All rights reserved. Made with ❤️ in Kenya.</p>
         </div>
     </footer>
+
+    <script>
+        // Animate timeline on scroll
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.timeline-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateX(0)';
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            items.forEach(item => {
+                item.style.opacity = 0;
+                item.style.transform = 'translateX(-30px)';
+                if (item.classList.contains('timeline-item')) {
+                    observer.observe(item);
+                }
+            });
+        });
+    </script>
 </body>
 </html>
