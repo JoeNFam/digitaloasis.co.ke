@@ -5,13 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Digital Oasis</title>
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        .info-item {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 1.8rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 168, 107, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .info-item:hover {
+            transform: translateY(-8px);
+        }
+        .info-item i {
+            font-size: 2.5rem;
+            color: #00a86b;
+            margin-bottom: 1rem;
+        }
+        .info-item h3 {
+            color: #006b42;
+            margin-bottom: 0.8rem;
+        }
+        .action-links {
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+        .action-links a {
+            display: inline-block;
+            margin: 0.8rem;
+            font-size: 1.1rem;
+        }
+        .map-container {
+            width: 100%;
+            height: 400px;
+            background: url('images/office-map.jpg') center/cover;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+        }
+        @media (max-width: 768px) {
+            .map-container {
+                font-size: 1.1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
-<body>
+<body id="top">
+    <!-- Header & Navigation -->
     <header>
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html">Digital Oasis</a>
+                    <a href="index.html">Digital <span>Oasis</span></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -24,79 +89,121 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1>Get in Touch</h1>
-        <p>Have a project in mind? Let’s discuss how we can help.</p>
-    </section>
-
-    <section class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact Digital Oasis</h2>
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone">
-                </div>
-                <div class="form-group">
-                    <label for="service">Service Interested In</label>
-                    <select id="service" class="form-control">
-                        <option>Network Installation</option>
-                        <option>Wi-Fi Solutions</option>
-                        <option>IT Support</option>
-                        <option>Cybersecurity</option>
-                        <option>Cloud Services</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+        <div class="container hero-content">
+            <h1>Get in Touch</h1>
+            <p>Have a project in mind? We’d love to help you automate your network, integrate M-Pesa, or deploy MikroTik systems.</p>
         </div>
     </section>
 
-    <section class="about" style="background: #fff;">
+    <!-- Contact Info -->
+    <section>
         <div class="container">
-            <h2 class="section-title">Our Location</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Nairobi Office</h3>
-                    <p><strong>Address:</strong> 123 Tech Avenue, Upper Hill, Nairobi, Kenya</p>
-                    <p><strong>Phone:</strong> +254 700 123 456</p>
-                    <p><strong>Email:</strong> info@digitaloasis.co.ke</p>
-                    <p><strong>Hours:</strong> Mon-Fri: 8:00 AM - 6:00 PM</p>
-                    <br>
-                    <h3>Service Areas</h3>
-                    <p>We serve clients across Kenya including Mombasa, Kisumu, Nakuru, Eldoret, and remote support nationwide.</p>
+            <h2 class="section-title">Contact Information</h2>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <h3>Call Us</h3>
+                    <p><strong>+254 111 597 446</strong></p>
+                    <a href="tel:+254111597446" class="btn btn-outline">Call Now</a>
                 </div>
-                <div class="about-image" style="background: #e0f0ff; display: flex; align-items: center; justify-content: center;">
-                    <p>📍 Map Placeholder</p>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p><strong>+254 111 597 446</strong></p>
+                    <a href="https://wa.me/254111597446" target="_blank" class="btn" style="background:#25D366; color:white;">
+                        <i class="fab fa-whatsapp"></i> Message Us
+                    </a>
                 </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email Us</h3>
+                    <p><strong>info@digitaloasis.co.ke</strong></p>
+                    <a href="mailto:info@digitaloasis.co.ke" class="btn btn-outline">Send Email</a>
+                </div>
+            </div>
+
+            <div class="action-links">
+                <a href="tel:+254111597446" class="btn"><i class="fas fa-phone-alt"></i> Call +254 111 597 446</a>
+                <a href="https://wa.me/254111597446" target="_blank" class="btn" style="background:#00a86b;">
+                    <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Office Location -->
+    <section style="padding:2rem 0;">
+        <div class="container">
+            <h2 class="section-title">Our Office</h2>
+            <p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+                Visit us in Nairobi or schedule a remote consultation. We serve clients across Kenya — from Mombasa to Kisumu.
+            </p>
+            <div class="map-container">
+                📍 Digital Oasis HQ, Upper Hill, Nairobi, Kenya
+            </div>
+            <p style="text-align:center; color:#555;">
+                <strong>Address:</strong> Block B, Tech Plaza, Waiyaki Way, Upper Hill, Nairobi<br>
+                <strong>Hours:</strong> Mon-Fri: 8:00 AM - 6:00 PM | Sat: 9:00 AM - 2:00 PM
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact">
+        <div class="container">
+            <h2 class="section-title" style="color:white;">Send Us a Message</h2>
+            <form class="contact-form" action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+254 ...">
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Interested In</label>
+                    <select id="service" name="service" class="form-control">
+                        <option value="MikroTik Billing">MikroTik Billing & M-Pesa</option>
+                        <option value="Network Installation">Network Installation</option>
+                        <option value="Wi-Fi Solutions">Enterprise Wi-Fi</option>
+                        <option value="IT Support">Managed IT Support</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+
+            <p style="text-align:center; margin-top:2rem; color:#555;">
+                We respond within 2 hours during business hours.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>Digital Oasis</h3>
-                    <p>Trusted IT & Networking Partner for Kenyan Businesses</p>
+                    <p>Your trusted partner for IT & MikroTik solutions in Kenya.</p>
                     <div class="social-links">
-                        <a href="#">FB</a>
-                        <a href="#">TW</a>
-                        <a href="#">IG</a>
-                        <a href="#">LI</a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </div>
                 </div>
                 <div class="footer-column">
@@ -111,13 +218,25 @@
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p>📍 Nairobi, Kenya</p>
-                    <p>📞 +254 700 123 456</p>
-                    <p>✉️ info@digitaloasis.co.ke</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Upper Hill, Nairobi, Kenya</p>
+                    <p><i class="fas fa-phone"></i> <strong>+254 111 597 446</strong></p>
+                    <p><i class="fas fa-envelope"></i> info@digitaloasis.co.ke</p>
                 </div>
             </div>
-            <p>&copy; 2024 Digital Oasis. All rights reserved.</p>
+            <p>&copy; 2024 Digital Oasis. All rights reserved. Made with ❤️ in Kenya.</p>
         </div>
     </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
